@@ -1,0 +1,16 @@
+# ninja log v5
+221	459	7025907480059906	libs/data_structures/libdata_structures.a	a8800aaa74ca57d4
+1	482	7026033635980525	build.ninja	f836382ac9f544a1
+6	179	6991434006959619	libs/algorithms/CMakeFiles/data_structures.dir/matrix/matrix.c.obj	9edd2eba09b3bcbc
+26	349	6992032979144545	libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj	74206300217a543d
+26	184	6991434419190375	libs/algorithms/CMakeFiles/algorithms.dir/algorithm.c.obj	6581c9f597ae7dec
+460	1115	7025907486485486	lab15.exe	3b4798a3894e638b
+5	277	7025904291331778	CMakeFiles/lab15.dir/main.c.obj	220fb580bd54472b
+6	219	7025907477731444	libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj	31ae8c5bd72f47e7
+6	153	6993998314971045	libs/algorithms/CMakeFiles/algorithms.dir/array/array.c.obj	a21ead7106b05b09
+155	296	6993998316375991	libs/algorithms/libalgorithms.a	3b2c99b274d77245
+17	275	6994512387612906	libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj	b3259f291fa9a9f1
+28	472	7025892009813822	libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj	f691928e2add8354
+18	323	6991434008452914	libs/algorithms/CMakeFiles/data_structures.dir/bitset/bitset.c.obj	384203e9973373bd
+27	468	6991434009901953	libs/algorithms/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj	5efc130818b39024
+470	629	6991434011523658	libs/algorithms/libdata_structures.a	c455684b1ed57745
