@@ -13,8 +13,16 @@ vector createVector(size_t n){
     return (vector) {(n == 0 ? NULL: a),0,n};
 }
 
+bool isEmpty(vector *v){
+    return v->size == 0 ? true: false;
+}
+
+bool isFull(vector *v) {
+    return v->size == v->capacity ? true: false;
+}
+
 void reserve(vector *v, size_t newCapacity) {
-    int *a = malloc(sizeof(int) * newCapacity);
+    int *a = realloc(v->data, v->capacity);
     if (a == NULL)
         bad_alloc();
     if (newCapacity == 0)
@@ -22,7 +30,7 @@ void reserve(vector *v, size_t newCapacity) {
     if (newCapacity < v->size)
         v->size = newCapacity;
     v->capacity = newCapacity;
-    v->data = realloc(v->data, v->capacity);
+    v->data = a;
 }
 
 void clear(vector *v) {
@@ -37,20 +45,13 @@ void deleteVector(vector *v) {
     free(v->data);
 }
 
-bool isEmpty(vector *v){
-    return v->size == 0 ? true: false;
-}
-
-bool isFull(vector *v) {
-    return v->size == v->capacity ? true: false;
-}
 
 int getVectorValue(vector *v, size_t i){
     return v->data[i];
 }
 
 void pushBack(vector *v, int x){
-    if (v->size == v->capacity)
+    if (isFull(v))
         reserve(v, v->capacity * 2 + 1);
     v->data[v->size++] = x;
 }
@@ -74,5 +75,5 @@ int* back(vector *v){
 }
 
 int* front(vector *v) {
-    return &v->data[0];
+    return v->data;
 }
