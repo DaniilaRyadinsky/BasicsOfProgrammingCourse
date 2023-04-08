@@ -975,11 +975,49 @@ void test_popBack_notEmptyVector() {
     printf("popBack_notEmptyVector_ok\n");
 }
 
+void test_atVector_notEmptyVector() {
+    vector v = createVector(0);
+    pushBack(&v, 10);
+    pushBack(&v, 6);
+    int *p = atVector(&v, 0);
+    if (*p == 10)
+        printf("atVector_notEmptyVector_ok\n");
+}
 
-void test(){
+void test_atVector_requestToLastElement() {
+    vector v = createVector(0);
+    pushBack(&v, 10);
+    pushBack(&v, 6);
+    int *p = atVector(&v, 1);
+    if (*p == 6)
+        printf("atVector_requestToLastElement_ok\n");
+}
+
+void test_back_oneElementInVector() {
+    vector v = createVector(0);
+    pushBack(&v, 10);
+    int *p = back(&v);
+    if (*p == 10)
+        printf("back_oneElementInVector_ok\n");
+}
+
+void test_front_oneElementInVector() {
+    vector v = createVector(0);
+    pushBack(&v, 10);
+    int *p = back(&v);
+    if (*p == 10)
+        printf("front_oneElementInVector_ok\n");
+}
+
+
+void test() {
     test_pushBack_emptyVector();
     test_pushBackfullVector();
     test_popBack_notEmptyVector();
+    test_atVector_notEmptyVector();
+    test_atVector_requestToLastElement();
+    test_back_oneElementInVector();
+    test_front_oneElementInVector();
 }
 
 int main() {
