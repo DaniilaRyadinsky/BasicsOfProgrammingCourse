@@ -949,9 +949,41 @@
 //    printf("sucsess matrix");
 //}
 
-int main() {
-    vector v = createVector(SIZE_MAX);
+void test_pushBack_emptyVector() {
+    vector a = createVector(10);
+    pushBack(&a, 6);
+    if (a.data[0] == 6)
+        printf("pushBack_emptyVector_ok\n");
+}
 
+void test_pushBackfullVector() {
+    vector a = createVector(1);
+    a.data[0] = 1;
+    a.size = 1;
+    pushBack(&a, 6);
+    if (a.data[1] == 6)
+        printf("pushBack_fullVector_ok\n");
+}
+
+void test_popBack_notEmptyVector() {
+    vector v = createVector(0);
+    pushBack(&v, 10);
+    assert(v.size == 1);
+    popBack(&v);
+    assert(v.size == 0);
+    assert(v.capacity == 1);
+    printf("popBack_notEmptyVector_ok\n");
+}
+
+
+void test(){
+    test_pushBack_emptyVector();
+    test_pushBackfullVector();
+    test_popBack_notEmptyVector();
+}
+
+int main() {
+    test();
 
     return 0;
 }
